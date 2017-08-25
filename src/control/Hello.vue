@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <inputComponent value="" :error="err" noEmpty="true" class="input" label="sfsf"/>
+    <inputComponent value="" :error="err" noEmpty="true" class="input" label="sfsf" :cl="cl"/>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   },
   data () {
     return {
-      err: '',
+      err: 'dddd',
       msg: 'Welcome to Your Vue.js App'
     }
   },
@@ -23,6 +23,9 @@ export default {
     },
     changeSS: function () {
       this.$store.commit('showUserName')
+    },
+    cl: function (a) {
+      this.err = a
     }
   }
 }

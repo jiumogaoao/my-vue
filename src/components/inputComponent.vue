@@ -5,13 +5,14 @@
     <div class="clear"></div>
     <div class="error">{{error}}</div>
     <div class="noEmpty" v-if="noEmpty">*</div>
+    <div @click="cl(444)">click</div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'inputC',
-    props: ['value', 'error', 'noEmpty', 'label'],
+    props: ['value', 'error', 'noEmpty', 'label', 'cl'],
     data () {
       let color = this.error.length ? 'red' : '#000'
       return {
